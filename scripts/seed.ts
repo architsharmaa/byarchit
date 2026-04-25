@@ -142,50 +142,35 @@ async function seed() {
     ]);
     */
 
-    console.log("Seeding initial data if collections are empty...");
-    if (await Build.countDocuments() === 0) {
-      await Build.insertMany(builds);
-      console.log("   - Seeded Builds");
-    }
-    if (await Writing.countDocuments() === 0) {
-      await Writing.insertMany(writings);
-      console.log("   - Seeded Writings");
-    }
-    if (await SiteConfig.countDocuments() === 0) {
-      await SiteConfig.create(siteConfig);
-      console.log("   - Seeded SiteConfig");
-    }
-    if (await NowPage.countDocuments() === 0) {
-      await NowPage.create(nowData);
-      console.log("   - Seeded NowPage");
-    }
-    if (await AboutPage.countDocuments() === 0) {
-      await AboutPage.create(aboutData);
-      console.log("   - Seeded AboutPage");
-    }
+    console.log("Checking collections for existing data...");
 
     // ── Site Config ──────────────────────────────────────────
 
     console.log("\n📝 Seeding SiteConfig...");
-    await SiteConfig.create({
-      heroHeading: "Archit Sharma",
-      heroSubtext:
-        "Things I build. Things I think. A collection of thoughts on software, design, philosophy and the quiet spaces in between.",
-      heroImageUrl: "./images/cover.jpeg",
-      heroImageAlt: "Brutalist architecture",
-      contactEmail: "contact@example.com",
-      socialLinks: [
-        { platform: "Twitter", url: "#" },
-        { platform: "GitHub", url: "#" },
-        { platform: "RSS", url: "#" },
-      ],
-    });
-    console.log("   ✅ SiteConfig seeded.");
+    if (await SiteConfig.countDocuments() === 0) {
+      await SiteConfig.create({
+        heroHeading: "Archit Sharma",
+        heroSubtext:
+          "Things I build. Things I think. A collection of thoughts on software, design, philosophy and the quiet spaces in between.",
+        heroImageUrl: "./images/cover.jpeg",
+        heroImageAlt: "Brutalist architecture",
+        contactEmail: "contact@example.com",
+        socialLinks: [
+          { platform: "Twitter", url: "#" },
+          { platform: "GitHub", url: "#" },
+          { platform: "RSS", url: "#" },
+        ],
+      });
+      console.log("   ✅ SiteConfig seeded.");
+    } else {
+      console.log("   ⏩ SiteConfig exists, skipping...");
+    }
 
     // ── Builds ───────────────────────────────────────────────
 
     console.log("\n🏗️  Seeding Builds...");
-    const builds = await Build.insertMany([
+    if (await Build.countDocuments() === 0) {
+      const buildsData = [
       // Featured builds (shown on homepage)
       {
         title: "Overture",
@@ -322,13 +307,18 @@ async function seed() {
         displayOrder: 8,
         layout: "list",
       },
-    ]);
-    console.log(`   ✅ Seeded ${builds.length} builds.`);
+      ];
+      const insertedBuilds = await Build.insertMany(buildsData);
+      console.log(`   ✅ Seeded ${insertedBuilds.length} builds.`);
+    } else {
+      console.log("   ⏩ Builds already exist, skipping...");
+    }
 
     // ── Writings ─────────────────────────────────────────────
 
     console.log("\n✍️  Seeding Writings...");
-    const writings = await Writing.insertMany([
+    if (await Writing.countDocuments() === 0) {
+      const writingsData = [
       // Featured
       {
         title: "The Architecture of Silence in UI",
@@ -428,13 +418,18 @@ async function seed() {
         featured: false,
         content: "",
       },
-    ]);
-    console.log(`   ✅ Seeded ${writings.length} writings.`);
+      ];
+      const insertedWritings = await Writing.insertMany(writingsData);
+      console.log(`   ✅ Seeded ${insertedWritings.length} writings.`);
+    } else {
+      console.log("   ⏩ Writings already exist, skipping...");
+    }
 
     // ── Now Page ─────────────────────────────────────────────
 
     console.log("\n📌 Seeding NowPage...");
-    await NowPage.create({
+    if (await NowPage.countDocuments() === 0) {
+      await NowPage.create({
       intro: {
         heading: "What I'm doing now.",
         body: "This is a declaration of intent. A snapshot of my current priorities, the projects actively in flight, and the ideas taking up residence in my mind. Inspired by Derek Sivers' concept, this page is updated rhythmically, prioritizing deep focus over continuous broadcasting.",
@@ -486,13 +481,17 @@ async function seed() {
           ],
         },
       ],
-    });
-    console.log("   ✅ NowPage seeded.");
+      });
+      console.log("   ✅ NowPage seeded.");
+    } else {
+      console.log("   ⏩ NowPage exists, skipping...");
+    }
 
     // ── About Page ───────────────────────────────────────────
 
     console.log("\n👤 Seeding AboutPage...");
-    await AboutPage.create({
+    if (await AboutPage.countDocuments() === 0) {
+      await AboutPage.create({
       heading: "About",
       bio: "I am an engineer and a writer, exploring the intersection of complex systems, human behavior, and the philosophical underpinnings of modern technology. My work is an attempt to map the territories between what we build and why we build it.",
       imageUrl:
@@ -519,8 +518,11 @@ async function seed() {
           ],
         },
       ],
-    });
-    console.log("   ✅ AboutPage seeded.");
+      });
+      console.log("   ✅ AboutPage seeded.");
+    } else {
+      console.log("   ⏩ AboutPage exists, skipping...");
+    }
 
     const duration = ((Date.now() - start) / 1000).toFixed(2);
     console.log(`\n✨ Done! Database fully populated in ${duration}s. ✨\n`);
