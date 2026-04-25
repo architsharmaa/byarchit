@@ -15,7 +15,7 @@ export default async function Home() {
       {/* Hero Section */}
       <section className="max-w-container-max mx-auto px-gutter py-section-padding flex flex-col md:flex-row gap-gutter items-center min-h-[716px] animate-in fade-in duration-1000">
         <div className="flex-1 w-full relative image-texture aspect-[4/5] md:aspect-square bg-surface-container overflow-hidden">
-          <img
+          <img loading="lazy"
             alt={config?.heroImageAlt || "Hero image"}
             className="w-full h-full object-cover object-center grayscale-[20%] opacity-90 transition-all duration-700 hover:scale-105"
             src={getDirectDriveUrl(config?.heroImageUrl) || "./images/cover.jpeg"}
@@ -51,7 +51,7 @@ export default async function Home() {
                       i % 2 === 0 ? "aspect-video" : "aspect-[4/3]"
                     } bg-surface-variant mb-stack-sm overflow-hidden relative image-texture`}
                   >
-                    <img
+                    <img loading="lazy"
                       alt={build.imageAlt || "Project preview"}
                       className="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out"
                       src={getDirectDriveUrl(build.imageUrl)}

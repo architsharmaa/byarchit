@@ -10,7 +10,7 @@ function AsymmetricBuild({ build }: { build: IBuild }) {
       <Link href={`/builds/${build.slug}`} className="cursor-pointer">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
           <div className="md:col-span-7 image-texture overflow-hidden">
-            <img
+            <img loading="lazy"
               alt={build.imageAlt || "Project image"}
               className="w-full h-[600px] object-cover grayscale opacity-90 transition-all duration-700 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105"
               src={getDirectDriveUrl(build.imageUrl)}
@@ -65,7 +65,7 @@ function EditorialBuild({ build }: { build: IBuild }) {
               </div>
             </div>
             <div className="md:w-2/3 image-texture overflow-hidden md:ml-12 mt-8 md:mt-0">
-              <img
+              <img loading="lazy"
                 alt={build.imageAlt || "Project image"}
                 className="w-full h-auto object-cover grayscale opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100"
                 src={getDirectDriveUrl(build.imageUrl)}
@@ -82,7 +82,7 @@ function FullbleedBuild({ build }: { build: IBuild }) {
   return (
     <section className="mb-section-padding relative h-[716px] min-h-[600px] flex items-center justify-center image-texture overflow-hidden group">
       <Link href={`/builds/${build.slug}`} className="absolute inset-0 z-20"></Link>
-      <img
+      <img loading="lazy"
         alt={build.imageAlt || "Project image"}
         className="absolute inset-0 w-full h-full object-cover grayscale opacity-60 transition-all duration-1000 group-hover:scale-110 group-hover:grayscale-0 group-hover:opacity-100"
         src={build.imageUrl}

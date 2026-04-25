@@ -29,7 +29,7 @@ export default async function Writing() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
               {featured.imageUrl && (
                 <div className="md:col-span-7 aspect-[16/10] w-full overflow-hidden bg-surface-variant relative">
-                  <img
+                  <img loading="lazy"
                     alt={featured.imageAlt || "Featured image"}
                     className="w-full h-full object-cover grayscale opacity-80 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0"
                     src={getDirectDriveUrl(featured.imageUrl)}

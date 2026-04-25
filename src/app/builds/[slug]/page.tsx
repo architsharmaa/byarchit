@@ -111,7 +111,7 @@ export default async function BuildProject({
           <div className="lg:col-span-7 animate-in fade-in scale-in-95 duration-1000 delay-300">
             <div className="w-full aspect-[4/5] md:aspect-[16/10] overflow-hidden bg-zinc-100 group shadow-2xl">
               {getDirectDriveUrl(build.imageUrl) && (
-                <img 
+                <img loading="lazy"
                   src={getDirectDriveUrl(build.imageUrl)} 
                   alt={build.imageAlt || build.title} 
                   className="w-full h-full object-cover grayscale opacity-90 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"

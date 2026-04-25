@@ -32,7 +32,7 @@ export default async function Now() {
           {/* Image break after first section */}
           {sIdx === 1 && page.imageUrl && (
             <div className="w-full h-[614px] my-section-padding bg-surface-container-highest overflow-hidden">
-              <img
+              <img loading="lazy"
                 alt={page.imageAlt || "Atmospheric photography"}
                 className="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]"
                 src={getDirectDriveUrl(page.imageUrl)}

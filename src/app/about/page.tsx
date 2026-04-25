@@ -74,7 +74,7 @@ export default async function About() {
           {page.imageUrl && (
             <>
               <div className="relative w-full aspect-[3/4] bg-surface-variant">
-                <img
+                <img loading="lazy"
                   alt={page.imageAlt || "About image"}
                   className="absolute inset-0 w-full h-full object-cover filter contrast-125 sepia-[.15]"
                   src={getDirectDriveUrl(page.imageUrl)}
