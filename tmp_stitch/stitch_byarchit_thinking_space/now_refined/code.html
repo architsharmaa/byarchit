@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#d3e8d5",
+                    "secondary-fixed-dim": "#b7ccb9",
+                    "background": "#fbf9f9",
+                    "surface": "#fbf9f9",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-container-high": "#e9e8e7",
+                    "on-secondary-fixed-variant": "#394b3d",
+                    "on-error-container": "#93000a",
+                    "outline": "#747878",
+                    "error": "#ba1a1a",
+                    "on-background": "#1b1c1c",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f5f3f3",
+                    "surface-container": "#efeded",
+                    "surface-tint": "#5f5e5e",
+                    "tertiary": "#000000",
+                    "on-surface-variant": "#444748",
+                    "outline-variant": "#c4c7c7",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#fbf9f9",
+                    "on-primary-fixed-variant": "#474746",
+                    "surface-dim": "#dbdad9",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e3e2e2",
+                    "surface-container-highest": "#e3e2e2",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-tertiary-container": "#838484",
+                    "on-secondary-fixed": "#0e1f13",
+                    "on-primary-fixed": "#1c1b1b",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-primary-container": "#858383",
+                    "on-secondary-container": "#546758",
+                    "primary-container": "#1c1b1b",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "secondary": "#506354",
+                    "inverse-surface": "#303031",
+                    "secondary-container": "#d0e5d2",
+                    "primary": "#000000",
+                    "on-surface": "#1b1c1c",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#e2e2e2",
+                    "tertiary-container": "#1a1c1c",
+                    "primary-fixed": "#e5e2e1",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "16px",
+                    "xl": "128px",
+                    "md": "32px",
+                    "base": "8px",
+                    "lg": "64px",
+                    "gutter": "24px",
+                    "margin": "40px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "caption": ["Inter"],
+                    "display": ["Newsreader"],
+                    "h2": ["Newsreader"],
+                    "label-caps": ["Inter"],
+                    "h1": ["Newsreader"],
+                    "h3": ["Newsreader"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.bg-noise {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuClI4spYh-ZQtAtyiYTr6_uW6vmYQII_BlFUkDw7gd7-iThDn9QJTiqA_J-HhecPFtCuWTu8jo1-e1h_5jrqfwQ-_OU3z6hek27CUNRXohfEp7ZxjHL3a0kXI0hFkKbL9idzuLwt03Rq35fNflnyv3mPQFNeN2NVYTkWVcIcqyVDX9ZZwxcm7XLSMvxpKK4FVyGRgAGNqLVWXwaK0ueGwu0RKQWqJwwim3v-Sl2zdfwfmM6OVGEKJhfm9NmaEZ_uaFdv1KXWPmKcgrf)
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-container">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-[#1A1A1A] border-b border-stone-100 dark:border-stone-900 sticky top-0 z-50">
+<nav class="max-w-[1120px] mx-auto px-8 h-24 flex items-center justify-between font-serif antialiased text-sm tracking-tight">
+<div class="text-xl font-medium tracking-tighter text-stone-900 dark:text-stone-50">M.Studio</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300 cursor-pointer ease-in-out" href="#">Essays</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300 cursor-pointer ease-in-out" href="#">Gallery</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300 cursor-pointer ease-in-out" href="#">Archive</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300 cursor-pointer ease-in-out" href="#">About</a>
+<a class="text-emerald-900 dark:text-emerald-400 relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-emerald-900 dark:after:bg-emerald-400 after:rounded-full cursor-pointer ease-in-out" href="#">Now</a>
+</div>
+<button class="bg-primary text-on-primary px-sm py-xs rounded hover:opacity-90 transition-opacity font-label-caps uppercase tracking-widest text-[10px]">
+                Get in Touch
+            </button>
+</nav>
+</header>
+<main class="max-w-[1120px] mx-auto px-8">
+<!-- Hero Section -->
+<section class="py-xl">
+<div class="max-w-3xl">
+<span class="font-label-caps text-secondary uppercase tracking-[0.2em] mb-sm block">Status Update</span>
+<h1 class="font-display text-display text-on-surface mb-md">This is what I’m focused on <span class="text-secondary italic">right now</span>.</h1>
+<p class="font-body-lg text-on-surface-variant max-w-xl">
+                    Inspired by Derek Sivers, this page serves as a public declaration of my current priorities, projects, and curiosities. Last updated from my studio in Kyoto.
+                </p>
+<div class="mt-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">calendar_today</span>
+<span class="font-caption text-outline">Updated November 14, 2024</span>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout for Now Content -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Primary Focus: Design Engineering -->
+<div class="md:col-span-8 bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-lg flex flex-col justify-between group hover:border-secondary transition-colors duration-500">
+<div>
+<div class="flex items-center gap-sm mb-md">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-label-caps text-on-surface-variant">Core Project</span>
+</div>
+<h2 class="font-h1 text-on-surface mb-sm">Refining the <span class="italic font-serif">M.Studio</span> Design System</h2>
+<p class="font-body-md text-on-surface-variant max-w-lg">
+                        Currently obsessing over the intersection of <span class="text-secondary font-medium">minimalist aesthetics</span> and functional performance. I'm building a library of modular components that prioritize readability and calm.
+                    </p>
+</div>
+<div class="mt-lg aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img alt="Abstract digital grid" class="w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist design workspace with a clean wooden desk, high-end monitor showing elegant typography and UI components in soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoLbk8y5hKSgBpiFuesbjL_duYQcWQVQb4SwA3x9plUTSznHzr5g3wEps08RYESIBVN2YpWqSImZJY19MbDyMgTV1xuw_06hkiINU4QSJiRbJgYgb6CdhPtAYvejMpSnbzTP54iyznVyvnOxVZsEdLhDSjFDHFvyEIzA2Ti20nHgERthGFYz-D-94NsW2ZtBRtLIszIbBMJuSStWuE_1OtO8qNczwZTYH_Kg61rRnLu5HIKOLbiFXv9DX9px8ebaunDPLUSBY-eGpx"/>
+</div>
+</div>
+<!-- Side Card: Reading -->
+<div class="md:col-span-4 bg-secondary-container/20 border border-outline-variant/30 rounded-lg p-md flex flex-col">
+<div class="mb-md">
+<span class="material-symbols-outlined text-secondary mb-sm">auto_stories</span>
+<h3 class="font-h3 text-on-surface">Reading</h3>
+</div>
+<ul class="space-y-sm flex-grow">
+<li class="border-b border-outline-variant/20 pb-sm">
+<p class="font-body-md text-on-surface">The Architecture of Happiness</p>
+<p class="font-caption text-outline">Alain de Botton</p>
+</li>
+<li class="border-b border-outline-variant/20 pb-sm">
+<p class="font-body-md text-on-surface">In Praise of Shadows</p>
+<p class="font-caption text-outline">Jun'ichirō Tanizaki</p>
+</li>
+<li>
+<p class="font-body-md text-on-surface">Grid Systems</p>
+<p class="font-caption text-outline">Josef Müller-Brockmann</p>
+</li>
+</ul>
+<div class="mt-md bg-white p-sm rounded border border-outline-variant/10">
+<p class="font-caption italic text-on-secondary-container">"The sun never knew how great it was until it hit the side of a building."</p>
+</div>
+</div>
+<!-- Learning Section -->
+<div class="md:col-span-5 bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-md">
+<div class="flex items-center justify-between mb-md">
+<h3 class="font-h3 text-on-surface">Learning</h3>
+<span class="material-symbols-outlined text-secondary" data-weight="fill">school</span>
+</div>
+<div class="space-y-md">
+<div class="flex items-start gap-sm">
+<div class="text-secondary font-display text-h1 leading-none">01</div>
+<div>
+<h4 class="font-body-md font-medium text-on-surface">Japanese Ceramics</h4>
+<p class="font-caption text-on-surface-variant">Exploring the philosophy of Wabi-sabi through hands-on pottery classes.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<div class="text-secondary font-display text-h1 leading-none">02</div>
+<div>
+<h4 class="font-body-md font-medium text-on-surface">Generative Art</h4>
+<p class="font-caption text-on-surface-variant">Learning how to translate organic patterns into code-based visuals.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Image/Mood Card -->
+<div class="md:col-span-7 relative group rounded-lg overflow-hidden h-[320px]">
+<img alt="Minimal lamp" class="w-full h-full object-cover" data-alt="A single designer table lamp on a concrete surface casting soft warm light against a textured grey wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN7P75jKHDGDR1cTFcXzGO3oW8dk3pnVFyf9Ovv_CO96wFUKV-SZcQ2CbMyIT2rJ9KVLGQPq1xvvQTpXvg2mBsBGRUZXJJ2ikebDkgNMJxuM-mOwJ2Up_ZpfChZA3hBY3CIneU31ZKJAs9JylMp4vu-wH4hQjQPWeLNVfEpma2rTniU0JVu4hNtlvb7jrEZ2fTbWMCbTx7zPh8S_PMIfs2BjTU487_iUT1BpvOUzuEDIQG0SDUG8H2UbS1zdqopxU7GsDDtrXghGDg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-md left-md text-white">
+<span class="font-label-caps opacity-80 uppercase tracking-widest">Current Mood</span>
+<p class="font-h2 italic">Quiet contemplation in the morning light.</p>
+</div>
+</div>
+<!-- Personal Interest Asymmetric -->
+<div class="md:col-span-12 mt-lg">
+<div class="flex flex-col md:flex-row gap-lg items-center">
+<div class="md:w-1/2">
+<h2 class="font-h2 text-on-surface mb-sm">Living <span class="text-secondary">intentionally</span>.</h2>
+<p class="font-body-md text-on-surface-variant">
+                            I am currently spending most of my time away from screens. This season is about <strong>physicality</strong>—walking 10km daily, brewing oolong tea with ritualistic care, and practicing the art of doing nothing without guilt.
+                        </p>
+<div class="mt-md flex gap-sm">
+<span class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-caps rounded-full">Kyoto, JP</span>
+<span class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-caps rounded-full">Tea Rituals</span>
+<span class="px-sm py-xs bg-secondary-container text-on-secondary-container font-label-caps rounded-full">Deep Work</span>
+</div>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-sm">
+<div class="aspect-square bg-surface-container-high rounded overflow-hidden">
+<img alt="Tea" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Close up of a ceramic tea bowl with green matcha tea on a dark wooden tray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCAsPWmYsMD1ktDqO7Iizw2qt-elQGcb112ozmWIUMK_KAtHq_-K30LZKY_8azUa_6shRmamRi0y48uXaYttR5_St-DvOy82bY7U-2i0TP3vyEuQFN2mAZq-EYIHNAPmUIbz_gjUvanIXkprCZoFi4hc18TCXfAbL2OedpllQSREHcd4W-zSgfjZktZSA12qCsZrl7SMSIkrl9HVaH8U22Y-0D1G0sxZ-qpKd8gY_hQTB_BqJeYSS5_vXArK2q2QRmlIGzeQ_1he7L"/>
+</div>
+<div class="aspect-square bg-surface-container-high rounded overflow-hidden">
+<img alt="Zen Garden" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Aerial view of a raked zen rock garden with precise circular patterns in the sand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8qg1zHTgzOsbYOa81Y04wxln8pmVjY4JkMYZgG19IDWTpcSXsQ1-CqdZ3w2RSxD2WlESxl-iIluH4PWV9NVxRKo9-EG_xR6wqBV8NYJ0STxGr-v5pO9OPlIkX_3iU74lGqu3KkybzQ47QhbAnu6-UpgyDFHptWww5vb5n_-YX6DoS2f2HEjaWBtdu5YdEFlAaSy_ktvR0YxWEesyv_8h4G1QWfg7AHZOMriZ9eMdiOFGG7lKYNC_JmAZHc2IGAyJVZwXmpKvFSMjO"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Understated Call to Action -->
+<section class="mt-xl py-xl border-t border-outline-variant/30 text-center">
+<h2 class="font-h2 text-on-surface-variant mb-md">Have something on your mind?</h2>
+<a class="inline-flex items-center gap-base font-body-lg text-secondary hover:translate-x-2 transition-transform duration-300" href="mailto:hello@byarchit.com">
+                Let's start a conversation 
+                <span class="material-symbols-outlined">east</span>
+</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#1A1A1A] border-t border-stone-100 dark:border-stone-900 mt-64">
+<div class="max-w-[1120px] mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-baseline gap-4 font-serif italic text-xs tracking-wide text-stone-400 dark:text-stone-500">
+<div class="flex flex-col gap-base">
+<div class="font-medium text-stone-900 dark:text-white not-italic">M.Studio</div>
+<p>© 2024 Minimalist Studio. Built for the luxury of focus.</p>
+</div>
+<div class="flex gap-md">
+<a class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">Colophon</a>
+<a class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">RSS Feed</a>
+<a class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">Legal</a>
+</div>
+</div>
+</footer>
+</body></html>

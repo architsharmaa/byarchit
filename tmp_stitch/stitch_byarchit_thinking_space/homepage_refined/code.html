@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#d3e8d5",
+                    "secondary-fixed-dim": "#b7ccb9",
+                    "background": "#fbf9f9",
+                    "surface": "#fbf9f9",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-container-high": "#e9e8e7",
+                    "on-secondary-fixed-variant": "#394b3d",
+                    "on-error-container": "#93000a",
+                    "outline": "#747878",
+                    "error": "#ba1a1a",
+                    "on-background": "#1b1c1c",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f5f3f3",
+                    "surface-container": "#efeded",
+                    "surface-tint": "#5f5e5e",
+                    "tertiary": "#000000",
+                    "on-surface-variant": "#444748",
+                    "outline-variant": "#c4c7c7",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#fbf9f9",
+                    "on-primary-fixed-variant": "#474746",
+                    "surface-dim": "#dbdad9",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e3e2e2",
+                    "surface-container-highest": "#e3e2e2",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-tertiary-container": "#838484",
+                    "on-secondary-fixed": "#0e1f13",
+                    "on-primary-fixed": "#1c1b1b",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-primary-container": "#858383",
+                    "on-secondary-container": "#546758",
+                    "primary-container": "#1c1b1b",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "secondary": "#506354",
+                    "inverse-surface": "#303031",
+                    "secondary-container": "#d0e5d2",
+                    "primary": "#000000",
+                    "on-surface": "#1b1c1c",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#e2e2e2",
+                    "tertiary-container": "#1a1c1c",
+                    "primary-fixed": "#e5e2e1",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "16px",
+                    "xl": "128px",
+                    "md": "32px",
+                    "base": "8px",
+                    "lg": "64px",
+                    "gutter": "24px",
+                    "margin": "40px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "caption": ["Inter"],
+                    "display": ["Newsreader"],
+                    "h2": ["Newsreader"],
+                    "label-caps": ["Inter"],
+                    "h1": ["Newsreader"],
+                    "h3": ["Newsreader"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 1.25rem;
+        }
+        body {
+            background-color: #fbf9f9;
+            color: #1b1c1c;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- TopNavBar Implementation -->
+<header class="bg-white dark:bg-[#1A1A1A] border-b border-stone-100 dark:border-stone-900 sticky top-0 z-50">
+<div class="max-w-[1120px] mx-auto px-8 h-24 flex items-center justify-between">
+<a class="text-xl font-medium tracking-tighter text-stone-900 dark:text-stone-50 font-serif" href="/">M.Studio</a>
+<nav class="hidden md:flex items-center space-x-8 font-serif antialiased text-sm tracking-tight">
+<a class="text-emerald-900 dark:text-emerald-400 relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-emerald-900 dark:after:bg-emerald-400 after:rounded-full" href="#">Essays</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Gallery</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Archive</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300" href="#">About</a>
+</nav>
+<button class="font-serif text-sm px-6 py-2 border border-stone-900 hover:bg-stone-900 hover:text-white transition-all duration-300">
+                Get in Touch
+            </button>
+</div>
+</header>
+<main class="max-w-[1120px] mx-auto px-8 pt-xl">
+<!-- Hero Section -->
+<section class="mb-xl">
+<h1 class="font-display text-display text-primary mb-md">
+                Things I build. <br/> 
+                Things I think.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A digital garden by Archit. Exploring the intersection of minimalist design, functional architecture, and the luxury of deep focus.
+            </p>
+</section>
+<!-- Content Grid (Asymmetric) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Latest Writings (Primary Column) -->
+<div class="md:col-span-7 space-y-lg">
+<div class="flex items-center justify-between border-b border-outline-variant pb-base">
+<h2 class="font-label-caps text-label-caps text-on-secondary-container tracking-widest uppercase">Latest Essays</h2>
+<span class="text-caption font-caption text-outline">2024 Collection</span>
+</div>
+<div class="space-y-md">
+<!-- Essay Item 1 -->
+<article class="group cursor-pointer">
+<span class="font-label-caps text-label-caps text-on-secondary-container mb-xs block">March 12</span>
+<h3 class="font-h1 text-h1 group-hover:text-on-secondary-container transition-colors duration-300">The Architecture of Silence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Reducing visual noise to amplify cognitive clarity in workspace design.</p>
+<div class="mt-sm flex items-center text-on-secondary-container opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-caps text-label-caps">Read Essay</span>
+<span class="material-symbols-outlined ml-xs">arrow_forward</span>
+</div>
+</article>
+<div class="h-px bg-outline-variant"></div>
+<!-- Essay Item 2 -->
+<article class="group cursor-pointer">
+<span class="font-label-caps text-label-caps text-on-secondary-container mb-xs block">Feb 28</span>
+<h3 class="font-h1 text-h1 group-hover:text-on-secondary-container transition-colors duration-300">Functional Minimalism</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Beyond aesthetic: why stripping away features can be the ultimate utility.</p>
+<div class="mt-sm flex items-center text-on-secondary-container opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-caps text-label-caps">Read Essay</span>
+<span class="material-symbols-outlined ml-xs">arrow_forward</span>
+</div>
+</article>
+<div class="h-px bg-outline-variant"></div>
+<!-- Essay Item 3 -->
+<article class="group cursor-pointer">
+<span class="font-label-caps text-label-caps text-on-secondary-container mb-xs block">Jan 15</span>
+<h3 class="font-h1 text-h1 group-hover:text-on-secondary-container transition-colors duration-300">Digital Longevity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Designing interfaces that age gracefully in an era of rapid obsolescence.</p>
+<div class="mt-sm flex items-center text-on-secondary-container opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-caps text-label-caps">Read Essay</span>
+<span class="material-symbols-outlined ml-xs">arrow_forward</span>
+</div>
+</article>
+</div>
+</div>
+<!-- Side Builds (Secondary Column) -->
+<div class="md:col-span-4 md:col-start-9 space-y-lg">
+<div class="flex items-center justify-between border-b border-outline-variant pb-base">
+<h2 class="font-label-caps text-label-caps text-on-secondary-container tracking-widest uppercase">Current Builds</h2>
+</div>
+<div class="space-y-md">
+<!-- Build Item 1 -->
+<div class="group relative aspect-square bg-surface-container overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist monochromatic dashboard interface design on a sleek laptop screen in a bright airy studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoCQWyLcWe-pEtRbwoqnfMioo1XhJ-DPoaYFi-QtEy9XbilJw-Z5aODqoUhK1rgr6EHY024idxvT5yq-BSYT6gnwsH8VhDdDQPWwjuj61P2bb7uCto-uLVpoAGonmzmvKHNsJ6esB8E3EIohgpU9Kag7eiZgvoQ-Jl2PZyIi4LQhv17euddkytX-jLbWI7pv_fQiXuc02sUXMQbEOnaK9zLXpmWm7tF4kql08alZY7UfZs97HczW9Rzv-0XuCayDjuhXgKz-ezfTlD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent p-md flex flex-col justify-end">
+<h4 class="font-h3 text-h3">Mono-Space</h4>
+<p class="font-caption text-caption text-on-surface-variant">A distraction-free writing environment.</p>
+</div>
+</div>
+<!-- Build Item 2 -->
+<div class="group relative aspect-square bg-surface-container overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Close up of a high-quality physical paper journal with clean typography and a single black pen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz8w1JLc4fZ-yuGyDNyzCPt2l8dKyqYcQI3LnrQByvZVLBJW4ryv9fShEFMv7bJ90GkpzwIJh8je9G6k4y0Le2SoDkwc-tKzw7UcTDqzvH_q_Vfs6aA7xHinCmeOsOHUPLtCArzgrvLjUex39Fxasjb5mQWT1pf1KPU7QQTLVdc-7EadofCnoM-N2BPshwhJnD-ow5WEfraI6LSaHtV4waoaEpoJwdMiwub7VK6NWYtUDPB7TD9DTLt22LFegIc_fEoCvAv37Le9Nv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent p-md flex flex-col justify-end">
+<h4 class="font-h3 text-h3">Analog OS</h4>
+<p class="font-caption text-caption text-on-surface-variant">Bridging physical systems with digital tools.</p>
+</div>
+</div>
+<a class="inline-flex items-center text-on-secondary-container hover:underline font-label-caps text-label-caps mt-md group" href="#">
+                        View All Projects
+                        <span class="material-symbols-outlined ml-xs transition-transform group-hover:translate-x-1">north_east</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Featured Quote / Philosophy -->
+<section class="mt-xl py-xl border-t border-outline-variant">
+<div class="max-w-3xl">
+<blockquote class="font-display italic text-h1 text-primary">
+                    "Perfection is attained not when there is nothing more to add, but when there is nothing left to take away."
+                </blockquote>
+<cite class="font-label-caps text-label-caps text-outline mt-md block not-italic">— Antoine de Saint-Exupéry</cite>
+</div>
+</section>
+</main>
+<!-- Footer Implementation -->
+<footer class="bg-white dark:bg-[#1A1A1A] border-t border-stone-100 dark:border-stone-900 mt-64">
+<div class="max-w-[1120px] mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-baseline gap-4">
+<div class="space-y-2">
+<span class="font-serif font-medium text-stone-900 dark:text-white">byarchit.com</span>
+<p class="font-serif italic text-xs tracking-wide text-stone-400 dark:text-stone-500">
+                    © 2024 Minimalist Studio. Built for the luxury of focus.
+                </p>
+</div>
+<div class="flex gap-8">
+<a class="font-serif italic text-xs tracking-wide text-stone-400 dark:text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">Colophon</a>
+<a class="font-serif italic text-xs tracking-wide text-stone-400 dark:text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">RSS Feed</a>
+<a class="font-serif italic text-xs tracking-wide text-stone-400 dark:text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">Legal</a>
+</div>
+</div>
+</footer>
+</body></html>

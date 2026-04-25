@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d3e8d5",
+                        "secondary-fixed-dim": "#b7ccb9",
+                        "background": "#fbf9f9",
+                        "surface": "#fbf9f9",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-high": "#e9e8e7",
+                        "on-secondary-fixed-variant": "#394b3d",
+                        "on-error-container": "#93000a",
+                        "outline": "#747878",
+                        "error": "#ba1a1a",
+                        "on-background": "#1b1c1c",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-container": "#efeded",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary": "#000000",
+                        "on-surface-variant": "#444748",
+                        "outline-variant": "#c4c7c7",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fbf9f9",
+                        "on-primary-fixed-variant": "#474746",
+                        "surface-dim": "#dbdad9",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e3e2e2",
+                        "surface-container-highest": "#e3e2e2",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-tertiary-container": "#838484",
+                        "on-secondary-fixed": "#0e1f13",
+                        "on-primary-fixed": "#1c1b1b",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-primary-container": "#858383",
+                        "on-secondary-container": "#546758",
+                        "primary-container": "#1c1b1b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary": "#506354",
+                        "inverse-surface": "#303031",
+                        "secondary-container": "#d0e5d2",
+                        "primary": "#000000",
+                        "on-surface": "#1b1c1c",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "tertiary-container": "#1a1c1c",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "xl": "128px",
+                        "md": "32px",
+                        "base": "8px",
+                        "lg": "64px",
+                        "gutter": "24px",
+                        "margin": "40px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "display": ["Newsreader"],
+                        "h2": ["Newsreader"],
+                        "label-caps": ["Inter"],
+                        "h1": ["Newsreader"],
+                        "h3": ["Newsreader"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::selection {
+            background-color: #d3e8d5;
+            color: #0e1f13;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container">
+<!-- Top Navigation -->
+<header class="bg-white dark:bg-[#1A1A1A] border-b border-stone-100 dark:border-stone-900 sticky top-0 z-50">
+<nav class="max-w-[1120px] mx-auto px-8 h-24 flex items-center justify-between font-serif antialiased text-sm tracking-tight">
+<div class="text-xl font-medium tracking-tighter text-stone-900 dark:text-stone-50">
+                byarchit.com
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-emerald-900 dark:text-emerald-400 relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-emerald-900 dark:after:bg-emerald-400 after:rounded-full cursor-pointer ease-in-out" href="#">Essays</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300 cursor-pointer ease-in-out" href="#">Gallery</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300 cursor-pointer ease-in-out" href="#">Archive</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300 cursor-pointer ease-in-out" href="#">About</a>
+</div>
+<a class="px-6 py-2 bg-primary text-on-primary text-label-caps rounded-full hover:bg-secondary transition-colors duration-300" href="#">
+                Get in Touch
+            </a>
+</nav>
+</header>
+<main class="max-w-[1120px] mx-auto px-8">
+<!-- Hero Section -->
+<section class="py-xl">
+<div class="max-w-3xl">
+<h1 class="font-display text-display text-primary mb-md">
+                    Reflections on <span class="text-secondary italic">design</span>, technology, and the quiet pursuit of <span class="text-secondary italic">craft</span>.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    A collection of long-form essays and brief notes written in the search for clarity. Updated occasionally, whenever the signal exceeds the noise.
+                </p>
+</div>
+</section>
+<!-- Featured Post - Asymmetric Layout -->
+<section class="mb-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg items-center">
+<div class="md:col-span-7">
+<div class="aspect-[16/10] overflow-hidden rounded-lg">
+<img alt="Interior design" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Minimalist desk setup with a single lamp, an open notebook, and soft morning light casting long shadows on a clean wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY1yuLMeqCaLdsZhDU3sP1bVtsdB7yvKYq_sK3jdfQ0mfi4o8SgKQLadKDrvJ18TnSs5YHtvl26mJRCZl-xOKsf6uTHMdwFb2HhqwIsOUosX4p1r5ju0TTYeT-ZgH6HyZkoDDj_BA32kVL_oX0VYgA6iGjLjg5XmbacP3paAoGK_7WIasLBx0cTWdEPjL_3jHAcTRYMpVpbGKkWUn2s2cF-F9giAT0CcOx7MB-OeY0PdF3q7DlFNuRT4aizzRAlSLwVoR5G2hLDV4K"/>
+</div>
+</div>
+<div class="md:col-span-5 flex flex-col justify-center">
+<span class="font-label-caps text-secondary mb-base">Featured Essay</span>
+<h2 class="font-h1 text-h1 text-primary mb-sm leading-tight">
+                        The Architecture of Digital Solitude
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                        Exploring how the tools we use shape our capacity for deep focus, and why intentional friction might be the ultimate luxury in a world of instant feedback.
+                    </p>
+<div class="flex items-center gap-sm">
+<span class="font-caption text-caption text-outline">Oct 24, 2024</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-caption text-caption text-outline">12 min read</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Essay List - Typography First -->
+<section class="py-lg border-t border-stone-100">
+<div class="flex flex-col gap-lg">
+<!-- Post 01 -->
+<article class="group cursor-pointer">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-2">
+<span class="font-label-caps text-outline group-hover:text-secondary transition-colors">2024 / NOV</span>
+</div>
+<div class="md:col-span-7">
+<h3 class="font-h2 text-h2 text-primary group-hover:text-secondary transition-colors mb-xs">The Case for Slow Software</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Building products that respect the user's cognitive load and value longevity over growth hacks.</p>
+</div>
+<div class="md:col-span-3 flex justify-end items-start">
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+</div>
+</div>
+</article>
+<!-- Post 02 -->
+<article class="group cursor-pointer py-lg border-t border-stone-100">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-2">
+<span class="font-label-caps text-outline group-hover:text-secondary transition-colors">2024 / SEP</span>
+</div>
+<div class="md:col-span-7">
+<h3 class="font-h2 text-h2 text-primary group-hover:text-secondary transition-colors mb-xs">Aesthetics of the Mundane</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Finding inspiration in the functional beauty of everyday objects and the stories they carry through time.</p>
+</div>
+<div class="md:col-span-3 flex justify-end items-start">
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+</div>
+</div>
+</article>
+<!-- Post 03 -->
+<article class="group cursor-pointer py-lg border-t border-stone-100">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-2">
+<span class="font-label-caps text-outline group-hover:text-secondary transition-colors">2024 / JUL</span>
+</div>
+<div class="md:col-span-7">
+<h3 class="font-h2 text-h2 text-primary group-hover:text-secondary transition-colors mb-xs">Beyond the Grid</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Why mathematical perfection in UI often leads to visual boredom, and the power of intentional asymmetry.</p>
+</div>
+<div class="md:col-span-3 flex justify-end items-start">
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+</div>
+</div>
+</article>
+<!-- Post 04 -->
+<article class="group cursor-pointer py-lg border-t border-stone-100">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-2">
+<span class="font-label-caps text-outline group-hover:text-secondary transition-colors">2024 / MAY</span>
+</div>
+<div class="md:col-span-7">
+<h3 class="font-h2 text-h2 text-primary group-hover:text-secondary transition-colors mb-xs">The Ethics of Attention</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Designing with a moral compass in an economy that treats human focus as a harvestable resource.</p>
+</div>
+<div class="md:col-span-3 flex justify-end items-start">
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Newsletter / Reflection Prompt -->
+<section class="mt-xl mb-xl bg-surface-container-low p-lg rounded-xl flex flex-col items-center text-center">
+<div class="max-w-xl">
+<span class="material-symbols-outlined text-secondary text-4xl mb-sm" data-weight="fill">mail</span>
+<h2 class="font-h2 text-h2 text-primary mb-sm">Occasional Thoughts</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                    Join a small group of thinkers receiving my latest essays directly in their inbox. No spam, just long-form reflections once or twice a month.
+                </p>
+<div class="flex flex-col sm:flex-row gap-xs w-full">
+<input class="flex-grow bg-white border border-outline-variant px-sm py-2 rounded focus:outline-none focus:border-secondary transition-colors font-body-md" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary font-label-caps px-lg py-2 hover:bg-secondary transition-colors">Subscribe</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#1A1A1A] border-t border-stone-100 dark:border-stone-900 mt-64">
+<div class="max-w-[1120px] mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-baseline gap-4 font-serif italic text-xs tracking-wide text-stone-400 dark:text-stone-500">
+<div class="flex flex-col gap-2">
+<span class="font-medium text-stone-900 dark:text-white not-italic">byarchit.com</span>
+<p>© 2024 Minimalist Studio. Built for the luxury of focus.</p>
+</div>
+<div class="flex gap-lg">
+<a class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200 cursor-pointer" href="#">Colophon</a>
+<a class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200 cursor-pointer" href="#">RSS Feed</a>
+<a class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200 cursor-pointer" href="#">Legal</a>
+</div>
+</div>
+</footer>
+</body></html>

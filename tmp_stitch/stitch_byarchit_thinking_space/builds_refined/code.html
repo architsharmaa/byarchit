@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Builds | M.Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d3e8d5",
+                        "secondary-fixed-dim": "#b7ccb9",
+                        "background": "#fbf9f9",
+                        "surface": "#fbf9f9",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-high": "#e9e8e7",
+                        "on-secondary-fixed-variant": "#394b3d",
+                        "on-error-container": "#93000a",
+                        "outline": "#747878",
+                        "error": "#ba1a1a",
+                        "on-background": "#1b1c1c",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-container": "#efeded",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary": "#000000",
+                        "on-surface-variant": "#444748",
+                        "outline-variant": "#c4c7c7",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fbf9f9",
+                        "on-primary-fixed-variant": "#474746",
+                        "surface-dim": "#dbdad9",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e3e2e2",
+                        "surface-container-highest": "#e3e2e2",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-tertiary-container": "#838484",
+                        "on-secondary-fixed": "#0e1f13",
+                        "on-primary-fixed": "#1c1b1b",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-primary-container": "#858383",
+                        "on-secondary-container": "#546758",
+                        "primary-container": "#1c1b1b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary": "#506354",
+                        "inverse-surface": "#303031",
+                        "secondary-container": "#d0e5d2",
+                        "primary": "#000000",
+                        "on-surface": "#1b1c1c",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "tertiary-container": "#1a1c1c",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "xl": "128px",
+                        "md": "32px",
+                        "base": "8px",
+                        "lg": "64px",
+                        "gutter": "24px",
+                        "margin": "40px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "display": ["Newsreader"],
+                        "h2": ["Newsreader"],
+                        "label-caps": ["Inter"],
+                        "h1": ["Newsreader"],
+                        "h3": ["Newsreader"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopNavBar -->
+<nav class="bg-white dark:bg-[#1A1A1A] border-b border-stone-100 dark:border-stone-900 sticky top-0 z-50">
+<div class="max-w-[1120px] mx-auto px-8 h-24 flex items-center justify-between">
+<a class="text-xl font-medium tracking-tighter text-stone-900 dark:text-stone-50 font-display" href="/">M.Studio</a>
+<div class="hidden md:flex items-center gap-md font-serif antialiased text-sm tracking-tight">
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Essays</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Gallery</a>
+<a class="text-emerald-900 dark:text-emerald-400 relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-emerald-900 dark:after:bg-emerald-400 after:rounded-full" href="#">Archive</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300" href="#">About</a>
+</div>
+<button class="bg-primary text-on-primary px-sm py-xs rounded hover:opacity-90 transition-opacity font-label-caps uppercase text-[10px] tracking-widest">Get in Touch</button>
+</div>
+</nav>
+<main class="max-w-[1120px] mx-auto px-8 pt-xl">
+<!-- Header Section -->
+<header class="max-w-2xl mb-lg">
+<h1 class="font-display text-display text-primary mb-sm">Builds</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">A digital archive of projects, experiments, and industrial curiosities. Exploring the intersection of utility and poetry.</p>
+</header>
+<!-- Filter / Tabs -->
+<div class="flex items-center gap-md border-b border-outline-variant mb-lg overflow-x-auto whitespace-nowrap scrollbar-hide">
+<button class="font-label-caps text-label-caps py-sm border-b-2 border-primary text-primary">All Works</button>
+<button class="font-label-caps text-label-caps py-sm border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-colors">Interface</button>
+<button class="font-label-caps text-label-caps py-sm border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-colors">Physical</button>
+<button class="font-label-caps text-label-caps py-sm border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-colors">Code Experiments</button>
+</div>
+<!-- Bento Grid Layout for Projects -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Build -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="overflow-hidden mb-base bg-surface-container-low border border-outline-variant/30">
+<img class="w-full aspect-[16/9] object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105" data-alt="Minimalist top-down view of high-end mechanical keyboard components and aluminum chassis on a light stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxC2GU1Os1QUBGs-6uTNQPTEcYVununWW5NYMYRX7Zm7B9A97yzb-yWe8TsQasEgfEgWvr1MBhjvjajxxTW6bIG6Ohu_aqrUPtQYZEVddVdC7yp_b3S6HnP7LnY4dw19uvh21XjXy-JzBe1lJRXkM_rCx9_tZVDrmQRc-Xr-kBq_QqUKNUf-LVjXSpO7rfyFfQzn14vGjca9pVjUsYcQ2X3iZFZREaP_f_fT0u_EKtgJ_kUR61Vnre_c_YqRbHCY4HrNc4ajL7bsK5"/>
+</div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase mb-xs block">Project 01 — 2024</span>
+<h2 class="font-h1 text-h1 text-primary group-hover:text-secondary transition-colors">Mono-Linear Keypad</h2>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary translate-y-2 transition-transform">north_east</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs max-w-lg">An industrial design study exploring the haptic feedback of CNC-milled aluminum paired with linear switches.</p>
+</div>
+<!-- Side Experiment -->
+<div class="md:col-span-4 group cursor-pointer flex flex-col">
+<div class="overflow-hidden mb-base bg-surface-container-low border border-outline-variant/30 grow">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105" data-alt="Abstract 3D render of soft flowing glass spheres in a muted emerald green and stone palette with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqnbny11YJk8hz9YY-UijFv4wSzLH-Q_9fT_GhyghRfNjY9QTg72OyubMwaQvmaryzH9f5sdaJAXejIRY52wtjUMeXqQPjITdotPxmLE80lm4JPq6YvzMpoU7dj8ASgwitWkJxHBUgA6AVao_cOW1BBFySy3cUmyEN2fA7HIfonA4RXpel7DQIVl-p_O-eTB_LelS9FwCilgcMAsQJxZDrPpPiZ_pXqbtOhJ--JSMw90izc0NUSv8l473bunAcP22cjym_vQhppG8H"/>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase mb-xs block">Experiment — UI</span>
+<h2 class="font-h3 text-h3 text-primary group-hover:text-secondary transition-colors">Glass-Grid System</h2>
+</div>
+</div>
+<!-- List Layout Row 1 -->
+<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-gutter pt-lg">
+<div class="group cursor-pointer">
+<div class="h-[1px] bg-outline-variant mb-md group-hover:bg-secondary transition-colors"></div>
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase mb-xs block">2023</span>
+<h3 class="font-h3 text-h3 mb-xs">Stasis Reader</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A minimal RSS reader designed to combat information overload.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="h-[1px] bg-outline-variant mb-md group-hover:bg-secondary transition-colors"></div>
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase mb-xs block">2023</span>
+<h3 class="font-h3 text-h3 mb-xs">Achromatic Icons</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">400+ vector assets for dark-mode focused interfaces.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="h-[1px] bg-outline-variant mb-md group-hover:bg-secondary transition-colors"></div>
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase mb-xs block">2022</span>
+<h3 class="font-h3 text-h3 mb-xs">Lumen Lamp</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">3D printed desk lighting with integrated capacitive dimming.</p>
+</div>
+</div>
+<!-- Asymmetric Secondary Feature -->
+<div class="md:col-span-5 md:mt-lg group cursor-pointer">
+<div class="overflow-hidden mb-base bg-surface-container-low border border-outline-variant/30">
+<img class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out" data-alt="Minimalist interior with one simple wooden chair and a single shaft of light on a concrete floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn8pgAI1_ttPdVnz6_FN64TiKpjSfY8aHGiWWLPPlif47-PM6WIXyBJoumy49m4lkKN4qptxcspagXmIZoH2bazhMBodB6QRJwanetyOyC7_lFTc85Efkwml982j9fgwnhzDUrQba6VdSXsPiUyiuwlNZvNxFpU5TNxMQM5RDZgmsX-oDMtMYgPvzBzXPdHU1rveWF8E1j1HZ4V5RfdzXnMbb7-nR2ZLbl9HVtnw47prYtD22WQ66Kc1OH6Bnv5V-zek7ubpz-V9vv"/>
+</div>
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase mb-xs block">Study — Space</span>
+<h3 class="font-h2 text-h2">The Voids Between</h3>
+</div>
+<div class="md:col-span-7 md:mt-lg flex flex-col justify-end">
+<div class="p-lg bg-surface-container border-l-2 border-secondary mb-base">
+<h3 class="font-h3 text-h3 mb-sm italic">"The details are not the details. They make the design."</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Currently exploring how subtle animations can reflect the weight and inertia of physical objects in digital spaces. Building a library of physics-based easing curves.</p>
+</div>
+<div class="flex gap-sm">
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full font-label-caps text-[10px]">Open Source</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-sm py-xs rounded-full font-label-caps text-[10px]">WIP</span>
+</div>
+</div>
+</div>
+<!-- Archive Section -->
+<section class="mt-xl pt-lg border-t border-outline-variant">
+<h2 class="font-h2 text-h2 mb-lg">Past Iterations</h2>
+<div class="space-y-sm">
+<div class="flex items-baseline justify-between py-sm hover:bg-surface-container-low px-base transition-colors group">
+<div class="flex items-baseline gap-md">
+<span class="font-label-caps text-outline group-hover:text-secondary">011</span>
+<span class="font-body-lg text-primary">Quartz Dashboard (v2)</span>
+</div>
+<span class="font-caption text-on-surface-variant italic">Sept 2022</span>
+</div>
+<div class="flex items-baseline justify-between py-sm hover:bg-surface-container-low px-base transition-colors group border-t border-outline-variant/30">
+<div class="flex items-baseline gap-md">
+<span class="font-label-caps text-outline group-hover:text-secondary">010</span>
+<span class="font-body-lg text-primary">Brutalist Grid Framework</span>
+</div>
+<span class="font-caption text-on-surface-variant italic">June 2022</span>
+</div>
+<div class="flex items-baseline justify-between py-sm hover:bg-surface-container-low px-base transition-colors group border-t border-outline-variant/30">
+<div class="flex items-baseline gap-md">
+<span class="font-label-caps text-outline group-hover:text-secondary">009</span>
+<span class="font-body-lg text-primary">Kinetic Typography Lib</span>
+</div>
+<span class="font-caption text-on-surface-variant italic">Jan 2022</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#1A1A1A] border-t border-stone-100 dark:border-stone-900 mt-xl">
+<div class="max-w-[1120px] mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-baseline gap-4">
+<div class="flex flex-col gap-xs">
+<span class="font-medium text-stone-900 dark:text-white font-display">M.Studio</span>
+<p class="font-serif italic text-xs tracking-wide text-stone-400 dark:text-stone-500">© 2024 Minimalist Studio. Built for the luxury of focus.</p>
+</div>
+<div class="flex gap-lg font-serif italic text-xs tracking-wide">
+<a class="text-stone-400 dark:text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">Colophon</a>
+<a class="text-stone-400 dark:text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">RSS Feed</a>
+<a class="text-stone-400 dark:text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">Legal</a>
+</div>
+</div>
+</footer>
+</body></html>

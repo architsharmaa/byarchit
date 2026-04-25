@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Archit Sharma — Things I build. Things I think.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#001946",
+                        "surface-container": "#efedee",
+                        "on-tertiary-container": "#4a3f00",
+                        "inverse-on-surface": "#f2f0f1",
+                        "surface-container-high": "#e9e8e9",
+                        "tertiary-container": "#bfab49",
+                        "on-secondary-container": "#606569",
+                        "on-primary-fixed-variant": "#00419d",
+                        "on-primary-container": "#e7ebff",
+                        "tertiary": "#6d5e00",
+                        "secondary-fixed-dim": "#c2c7cc",
+                        "surface-dim": "#dbdadb",
+                        "on-tertiary-fixed": "#211b00",
+                        "primary-container": "#3366cc",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#b1c5ff",
+                        "outline": "#737784",
+                        "on-surface": "#1b1c1d",
+                        "surface-container-low": "#f5f3f4",
+                        "surface-container-highest": "#e3e2e3",
+                        "secondary": "#5a5f63",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#171c20",
+                        "background": "#faf9fa",
+                        "surface-variant": "#e3e2e3",
+                        "surface-tint": "#2259bf",
+                        "on-background": "#1b1c1d",
+                        "primary-fixed": "#d9e2ff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#f9e37a",
+                        "on-surface-variant": "#434653",
+                        "surface-bright": "#faf9fa",
+                        "on-secondary-fixed-variant": "#42474b",
+                        "inverse-primary": "#b1c5ff",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#303031",
+                        "tertiary-fixed-dim": "#dcc661",
+                        "secondary-fixed": "#dfe3e8",
+                        "on-tertiary-fixed-variant": "#524600",
+                        "surface": "#faf9fa",
+                        "secondary-container": "#dfe3e8",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#094cb2",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c3c6d5",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif", "serif"],
+                        "display": ["Noto Serif", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md border-b border-slate-100 dark:border-stone-900 transition-colors duration-300 ease-out">
+<div class="flex justify-between items-center px-8 py-4 max-w-6xl mx-auto">
+<a class="font-serif italic text-2xl font-semibold text-slate-900 dark:text-slate-50 hover:opacity-80 transition-opacity duration-300 ease-out" href="#">Archit Sharma</a>
+<div class="hidden md:flex items-center gap-8 font-serif text-slate-900 dark:text-slate-100">
+<a class="text-slate-500 dark:text-stone-400 hover:text-slate-900 dark:hover:text-stone-100 hover:underline decoration-blue-700/30 transition-all duration-300 ease-out" href="#">Writing</a>
+<a class="text-slate-500 dark:text-stone-400 hover:text-slate-900 dark:hover:text-stone-100 hover:underline decoration-blue-700/30 transition-all duration-300 ease-out" href="#">Builds</a>
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1 duration-300 ease-out" href="#">Now</a>
+<a class="text-slate-500 dark:text-stone-400 hover:text-slate-900 dark:hover:text-stone-100 hover:underline decoration-blue-700/30 transition-all duration-300 ease-out" href="#">About</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center px-5 py-2.5 bg-surface-container-high hover:bg-surface-dim text-primary font-label text-sm font-medium tracking-wide transition-colors duration-300 ease-out rounded-lg" href="#">
+                Contact
+            </a>
+<!-- Mobile Menu Button (Icon only, no logic) -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-24 px-6 md:px-12 max-w-4xl mx-auto w-full flex flex-col gap-24">
+<!-- Hero / Intro -->
+<header class="space-y-6 max-w-2xl">
+<h1 class="font-headline text-5xl md:text-7xl font-semibold text-on-surface leading-tight tracking-tight">
+                Things I build.<br/>
+<span class="text-secondary">Things I think.</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                A digital curator exploring the intersection of design, engineering, and intentional living. Building tools that respect your attention.
+            </p>
+</header>
+<!-- Featured Work -->
+<section class="space-y-8">
+<div class="flex items-baseline justify-between border-b border-outline-variant/30 pb-4">
+<h2 class="font-label text-sm font-semibold tracking-widest uppercase text-tertiary">Featured Work</h2>
+<a class="font-label text-sm text-primary hover:text-primary-fixed-dim transition-colors flex items-center gap-1 group" href="#">
+                    View all projects
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="group block cursor-pointer">
+<div class="aspect-[16/9] w-full rounded-xl overflow-hidden bg-surface-container mb-6 relative">
+<img alt="Featured project workspace" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="minimalist architectural workspace with an open laptop, drafting tools, natural warm light streaming across a clean wooden desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq7EnS9X-iVuWqAwlL10iHNgEVQWEtedCeJhlPLR28RvHl5Nc0p2BCmdNTSWATCRmwZU9vJgb4V-fmNxq3S9GkPRjbd6NfvKcdIl8nGWMFVVNdiehoIOzbofKORnzN13lIoLWEixz7o1JtITz8zp2qWFbwwVF7-qOSOurlwZpLByH8LIZoQTGGZ6bgGSDvPRjTws_i9mhQVYAHBK_7GHQA9_mWDnAPK8xxd6XyfdyY50B-Ny-lhNaWxNrACPMPmgQZv56h3CGKHkeS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<h3 class="font-headline text-2xl font-semibold text-on-surface group-hover:text-primary transition-colors">Project Alexandria</h3>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary text-xs font-label uppercase tracking-wider">Case Study</span>
+</div>
+<p class="font-body text-on-surface-variant max-w-2xl leading-relaxed">
+                        Redesigning the reading experience for long-form essays. A typography-first approach to dense information architecture.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Latest Thinking & Building Stream -->
+<section class="space-y-8">
+<div class="flex items-baseline justify-between border-b border-outline-variant/30 pb-4">
+<h2 class="font-label text-sm font-semibold tracking-widest uppercase text-tertiary">Latest Thinking &amp; Building</h2>
+<a class="font-label text-sm text-primary hover:text-primary-fixed-dim transition-colors flex items-center gap-1 group" href="#">
+                    Full Archive
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Stream Item 1 (Essay) -->
+<article class="group relative pl-4 border-l-2 border-transparent hover:border-primary transition-all duration-300 py-2">
+<a class="block space-y-1" href="#">
+<div class="flex items-center gap-3 text-sm font-label text-on-surface-variant">
+<time datetime="2023-10-24">Oct 24, 2023</time>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Essay</span>
+</div>
+<h3 class="font-headline text-xl text-on-surface group-hover:text-primary transition-colors font-medium">The End of the Infinite Scroll</h3>
+<p class="font-body text-sm text-on-surface-variant/80 line-clamp-2 max-w-2xl">
+                            Why the next era of social software will abandon engagement metrics in favor of intentional friction and bounded curation.
+                        </p>
+</a>
+</article>
+<!-- Stream Item 2 (Project Update) -->
+<article class="group relative pl-4 border-l-2 border-transparent hover:border-primary transition-all duration-300 py-2">
+<a class="block space-y-1" href="#">
+<div class="flex items-center gap-3 text-sm font-label text-on-surface-variant">
+<time datetime="2023-09-12">Sep 12, 2023</time>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Build Notes</span>
+</div>
+<h3 class="font-headline text-xl text-on-surface group-hover:text-primary transition-colors font-medium">v2.0: Rewriting the Rendering Engine</h3>
+<p class="font-body text-sm text-on-surface-variant/80 line-clamp-2 max-w-2xl">
+                            Technical details on how we migrated from a virtual DOM to fine-grained reactivity without losing our minds.
+                        </p>
+</a>
+</article>
+<!-- Stream Item 3 (Essay) -->
+<article class="group relative pl-4 border-l-2 border-transparent hover:border-primary transition-all duration-300 py-2">
+<a class="block space-y-1" href="#">
+<div class="flex items-center gap-3 text-sm font-label text-on-surface-variant">
+<time datetime="2023-08-05">Aug 05, 2023</time>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Essay</span>
+</div>
+<h3 class="font-headline text-xl text-on-surface group-hover:text-primary transition-colors font-medium">Typography as Interface</h3>
+<p class="font-body text-sm text-on-surface-variant/80 line-clamp-2 max-w-2xl">
+                            When whitespace and font weight replace borders and buttons. A study in reductive design.
+                        </p>
+</a>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-slate-50 dark:bg-stone-950 border-t border-slate-100 dark:border-stone-900 tonal shift using surface-dim mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-6xl mx-auto gap-4">
+<div class="font-sans text-xs uppercase tracking-widest text-slate-400 dark:text-stone-500">
+                © 2024 Archit Sharma — Curated with Intent
+            </div>
+<a class="font-serif italic text-slate-900 dark:text-slate-50 hover:opacity-80 transition-opacity duration-200 ease-in-out" href="#">
+                Archit Sharma
+            </a>
+<div class="flex items-center gap-6 font-sans text-xs uppercase tracking-widest">
+<a class="text-slate-400 dark:text-stone-600 hover:text-blue-700 dark:hover:text-blue-400 transition-colors ease-in-out duration-200" href="#">Email</a>
+<a class="text-slate-400 dark:text-stone-600 hover:text-blue-700 dark:hover:text-blue-400 transition-colors ease-in-out duration-200" href="#">RSS</a>
+<a class="text-slate-400 dark:text-stone-600 hover:text-blue-700 dark:hover:text-blue-400 transition-colors ease-in-out duration-200" href="#">Archive</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#d3e8d5",
+                    "secondary-fixed-dim": "#b7ccb9",
+                    "background": "#fbf9f9",
+                    "surface": "#fbf9f9",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-container-high": "#e9e8e7",
+                    "on-secondary-fixed-variant": "#394b3d",
+                    "on-error-container": "#93000a",
+                    "outline": "#747878",
+                    "error": "#ba1a1a",
+                    "on-background": "#1b1c1c",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f5f3f3",
+                    "surface-container": "#efeded",
+                    "surface-tint": "#5f5e5e",
+                    "tertiary": "#000000",
+                    "on-surface-variant": "#444748",
+                    "outline-variant": "#c4c7c7",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#fbf9f9",
+                    "on-primary-fixed-variant": "#474746",
+                    "surface-dim": "#dbdad9",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e3e2e2",
+                    "surface-container-highest": "#e3e2e2",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-tertiary-container": "#838484",
+                    "on-secondary-fixed": "#0e1f13",
+                    "on-primary-fixed": "#1c1b1b",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-primary-container": "#858383",
+                    "on-secondary-container": "#546758",
+                    "primary-container": "#1c1b1b",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "secondary": "#506354",
+                    "inverse-surface": "#303031",
+                    "secondary-container": "#d0e5d2",
+                    "primary": "#000000",
+                    "on-surface": "#1b1c1c",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#e2e2e2",
+                    "tertiary-container": "#1a1c1c",
+                    "primary-fixed": "#e5e2e1",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "16px",
+                    "xl": "128px",
+                    "md": "32px",
+                    "base": "8px",
+                    "lg": "64px",
+                    "gutter": "24px",
+                    "margin": "40px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "caption": ["Inter"],
+                    "display": ["Newsreader"],
+                    "h2": ["Newsreader"],
+                    "label-caps": ["Inter"],
+                    "h1": ["Newsreader"],
+                    "h3": ["Newsreader"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-italic { font-family: 'Newsreader', serif; font-style: italic; }
+        .hairline-divider { border-bottom: 1px solid #E5E5E5; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased font-body-md">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-[#1A1A1A] border-b border-stone-100 dark:border-stone-900 sticky top-0 z-50">
+<div class="max-w-[1120px] mx-auto px-8 h-24 flex items-center justify-between font-serif antialiased text-sm tracking-tight">
+<div class="text-xl font-medium tracking-tighter text-stone-900 dark:text-stone-50">
+                M.Studio
+            </div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300 cursor-pointer ease-in-out" href="#">Essays</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300 cursor-pointer ease-in-out" href="#">Gallery</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300 cursor-pointer ease-in-out" href="#">Archive</a>
+<a class="text-emerald-900 dark:text-emerald-400 relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-emerald-900 dark:after:bg-emerald-400 after:rounded-full cursor-pointer ease-in-out" href="#">About</a>
+</nav>
+<div class="cursor-pointer ease-in-out text-stone-900 dark:text-stone-50 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-300">
+                Get in Touch
+            </div>
+</div>
+</header>
+<main class="max-w-[1120px] mx-auto px-8">
+<!-- Hero Section -->
+<section class="mt-xl mb-lg">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-on-secondary-container bg-secondary-container px-2 py-1 mb-md inline-block">THE STUDIO</span>
+<h1 class="font-display text-display text-on-background mb-md">
+                    Design is the silent ambassador <br/>
+<span class="serif-italic text-secondary">of your brand.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    ByArchit is an independent design practice led by Archit, focusing on the intersection of typography, minimalism, and the digital experience. We build spaces for clear thinking.
+                </p>
+</div>
+</section>
+<!-- Image Landscape -->
+<section class="mb-xl">
+<div class="aspect-[21/9] w-full overflow-hidden bg-surface-container">
+<img alt="Minimalist studio interior" class="w-full h-full object-cover" data-alt="Modern minimalist design studio with clean white walls, a large oak table, and soft natural morning light streaming through windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvYue0AAxY6wO1zKDDnYVd-_-2LNMP85av5j_gmKRQlxjjydQi-RYN7PQLLvfj1RgF7m1_TO4_cBgjqzFiW4OtEmwFsmWwoZ6PUSzzRrHI-YQxN5qzGVIJnRvPTBlFKiMXbs3ZrE4lkcsgmarUdj_Dcow7aX3lI2Ybbot7w4ntOhUl-m6GG6Fj1fKlycAAor1BvvcUNCZLZXh5vK00J9R-HfathqSvnda7KoeJQ-s9bBp7CoadSjsIXHBd5ZAv1LK569BpJY4THh-C"/>
+</div>
+</section>
+<!-- Asymmetric Content Block -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-lg mb-xl">
+<div class="md:col-span-4">
+<h2 class="font-h2 text-h2 text-on-background mb-sm">Our Philosophy</h2>
+<div class="w-12 h-[1px] bg-secondary mb-md"></div>
+<p class="font-caption text-caption text-on-surface-variant italic">
+                    "Simplicity is not the absence of clutter, but the presence of clarity."
+                </p>
+</div>
+<div class="md:col-span-8 flex flex-col gap-md">
+<div class="flex flex-col gap-sm">
+<h3 class="font-h3 text-h3 text-on-background">Quiet Confidence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        We believe that the most powerful messages are often the quietest. Our work avoids the noise of ephemeral trends, opting instead for a timeless aesthetic that prioritizes content and user focus.
+                    </p>
+</div>
+<div class="flex flex-col gap-sm">
+<h3 class="font-h3 text-h3 text-on-background">Intentionality</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Every pixel, every point of leading, and every hex code is chosen with surgical precision. We don't just "design"; we curate environments that facilitate deep work and meaningful interaction.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Bento Grid Feature -->
+<section class="mb-xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 bg-surface-container-low p-lg flex flex-col justify-between min-h-[320px] border border-stone-100">
+<div>
+<span class="material-symbols-outlined text-secondary mb-sm" data-icon="architecture">architecture</span>
+<h3 class="font-h2 text-h2 mb-sm">The Grid System</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Our layouts are built on a rigorous 12-column grid, ensuring balance and harmony across every viewport.</p>
+</div>
+<div class="flex gap-sm">
+<span class="px-2 py-1 bg-surface-container-high font-label-caps text-[10px] text-on-surface-variant">STRUCTURE</span>
+<span class="px-2 py-1 bg-surface-container-high font-label-caps text-[10px] text-on-surface-variant">RHYTHM</span>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-lg flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-secondary-fixed mb-md scale-150" data-icon="auto_stories">auto_stories</span>
+<h3 class="font-h3 text-h3 mb-sm">Editorial Focus</h3>
+<p class="font-caption opacity-80">Treating digital interfaces with the reverence of printed matter.</p>
+</div>
+<div class="bg-surface-container-lowest p-lg border border-stone-100 flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-label-caps text-on-surface">CORE SERVICES</span>
+</div>
+<ul class="flex flex-col gap-sm font-body-md text-on-surface-variant">
+<li class="flex justify-between border-b border-stone-50 pb-1">
+<span>Identity Design</span>
+<span class="material-symbols-outlined text-xs" data-icon="arrow_outward">arrow_outward</span>
+</li>
+<li class="flex justify-between border-b border-stone-50 pb-1">
+<span>Digital Strategy</span>
+<span class="material-symbols-outlined text-xs" data-icon="arrow_outward">arrow_outward</span>
+</li>
+<li class="flex justify-between border-b border-stone-50 pb-1">
+<span>Type Curation</span>
+<span class="material-symbols-outlined text-xs" data-icon="arrow_outward">arrow_outward</span>
+</li>
+<li class="flex justify-between">
+<span>Interface Dev</span>
+<span class="material-symbols-outlined text-xs" data-icon="arrow_outward">arrow_outward</span>
+</li>
+</ul>
+</div>
+<div class="md:col-span-2 relative group overflow-hidden bg-stone-200">
+<img alt="Abstract texture" class="w-full h-64 object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Extreme close-up of high-quality textured paper with a single droplet of green ink creating a soft bleed effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOpcRaIe4GbfdODc4UBAEFJrcbONxHKMwGCCkMyRt4DUQOQfQ1wa_A5opJZRKTM3_HWIDLcokdcY93FsfALed5JROtqQoUHxPQQpvnHAwVfoUqIFfEsRMnZ9EgxK38jEeN4wF51aNsqczzKMo1yREVORgumg_hX4Sunt-RQ4VdlQl6atUndkOm0huFtnuY_JwvRchRAfGlMXW0svnvAGPm2E0VVOInBgzZGXD3fgYNjTTBuWiXNlbj9I6b0jV0e8KBEdngdubC4P7d"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-lg">
+<span class="text-white font-display text-h1 italic">Attention to detail is everything.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Simple Contact List -->
+<section class="mb-xl pt-lg border-t border-stone-100">
+<div class="flex flex-col md:flex-row justify-between items-start gap-lg">
+<div class="max-w-sm">
+<h2 class="font-h2 text-h2 mb-sm">Let's collaborate.</h2>
+<p class="font-body-md text-on-surface-variant mb-md">We are currently accepting new projects for Q3 2024. Reach out to start a conversation about your vision.</p>
+</div>
+<div class="flex flex-col gap-sm w-full md:w-auto">
+<a class="font-h3 text-h3 text-secondary hover:underline underline-offset-8 transition-all" href="mailto:hello@byarchit.com">hello@byarchit.com</a>
+<div class="flex gap-md mt-sm">
+<a class="font-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">TWITTER</a>
+<a class="font-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+<a class="font-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">READ.CV</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#1A1A1A] border-t border-stone-100 dark:border-stone-900 mt-xl">
+<div class="max-w-[1120px] mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-baseline gap-4 font-serif italic text-xs tracking-wide text-stone-400 dark:text-stone-500">
+<div class="flex flex-col gap-2">
+<span class="font-medium text-stone-900 dark:text-white not-italic text-sm">M.Studio</span>
+<p>© 2024 Minimalist Studio. Built for the luxury of focus.</p>
+</div>
+<div class="flex gap-md">
+<a class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">Colophon</a>
+<a class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">RSS Feed</a>
+<a class="hover:text-emerald-800 dark:hover:text-emerald-400 transition-all duration-200" href="#">Legal</a>
+</div>
+</div>
+</footer>
+</body></html>
